@@ -16,7 +16,7 @@ namespace Uppgift2UWP.Models
 
         public static Settings settings = new Settings(); 
 
-        private static string connectionString = "Data Source=serveruppg2.database.windows.net;Initial Catalog=Dbuppg2;Persist Security Info=True;User ID=sparrjen;Password=Tavastia123!";
+        private static string connectionString = "Data Source=serveruppg2.database.windows.net;Initial Catalog=Dbuppg2;Persist Security Info=True;User ID=sparrjen;Password=###";
 
         public static async void ReadSettingsAsync()
         {
