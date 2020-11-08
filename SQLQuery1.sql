@@ -1,0 +1,19 @@
+﻿CREATE TABLE Customers (
+    SSNo BIGINT NOT NULL PRIMARY KEY,
+    FirstName NVARCHAR(20) NOT NULL,
+    LastName NVARCHAR(20) NOT NULL,
+    PhoneNo BIGINT NOT NULL,
+    Email NVARCHAR(50) NOT NULL,
+)
+GO
+
+
+CREATE TABLE Tickets (
+    TicketId INT IDENTITY (1,1) PRIMARY KEY,
+    CustomerId BIGINT NOT NULL FOREIGN KEY REFERENCES Customers(SSNo),
+    Created DATETIME2 NOT NULL,
+    [Status] NVARCHAR(20) NOT NULL,
+    Title NVARCHAR(20) NOT NULL,
+    Category NVARCHAR(20) NOT NULL,
+    [Description] NVARCHAR(MAX) NOT NULL,
+)
